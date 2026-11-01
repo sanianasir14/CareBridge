@@ -1,0 +1,382 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="CareBridge registration and cancer support guidance form.">
+  <title>Registration & Support Intake — CareBridge</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <header class="site-header">
+    <div class="container header-inner">
+      <a href="index.html" class="brand-link" aria-label="CareBridge Home">
+        <div class="brand-icon">♥</div>
+        <span class="brand-text">CareBridge</span>
+      </a>
+
+      <nav id="site-nav-menu" class="site-nav">
+        <a href="index.html" class="nav-link">Home</a>
+        <a href="media.html" class="nav-link">Media & Awareness</a>
+        <a href="register.html" class="nav-link active">Registration</a>
+        <a href="services.html" class="nav-link">Services</a>
+        <a href="portfolio.html" class="nav-link">Stories of Hope</a>
+        <a href="contact.html" class="nav-link">Contact</a>
+      </nav>
+
+      <div class="header-utilities">
+        <button class="header-cta-btn open-chatbot-btn" type="button">
+          Support Assistant
+        </button>
+
+        <button id="mobile-nav-toggle" class="mobile-menu-btn" type="button" aria-label="Toggle navigation menu" aria-expanded="false">
+          Menu
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <main id="main-content">
+
+    <section class="page-banner">
+      <div class="container">
+        <span class="banner-badge">Educational Prototype · Interactive Form</span>
+
+        <h1 id="register-banner-title" class="banner-title">
+          Registration & Support Intake Form
+        </h1>
+
+        <p class="banner-desc">
+          Demonstrating how patients and families can explore available welfare options, request guidance checklists, and configure accessibility preferences.
+        </p>
+
+        <div class="form-demo-alert" role="alert">
+          <div>
+            <h4>Educational Prototype Notice — No Medical Data Stored</h4>
+            <p>
+              This form is built strictly for a university Web Technologies coursework demonstration. It does not submit an official hospital application, store real CNIC numbers, or process financial grants. Do not upload confidential medical files or real passwords.
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="form-section">
+      <div class="container form-layout-wrapper">
+
+        <div class="form-container">
+          <form id="support-intake-form" novalidate>
+
+            <fieldset>
+              <legend>1. Applicant Profile & Identification</legend>
+
+              <p class="fieldset-description">
+                Basic demographic inputs demonstrating text, email, password, and number controls.
+              </p>
+
+              <div class="form-group" style="margin-bottom: 20px;">
+                <label for="system-tracking-id">System Prototype Tracking ID (Read-only):</label>
+                <input type="text" id="system-tracking-id" name="tracking_id" value="CB-PK-2026-DEMO-0842" readonly>
+                <span class="input-hint">This generated reference code demonstrates the HTML5 readonly attribute.</span>
+              </div>
+
+              <div class="form-group" style="margin-bottom: 20px;">
+                <label>I am submitting on behalf of:</label>
+
+                <div class="radio-group">
+                  <label class="choice-label">
+                    <input type="radio" name="applicant_role" value="patient" checked required>
+                    <span>Myself (The Patient)</span>
+                  </label>
+
+                  <label class="choice-label">
+                    <input type="radio" name="applicant_role" value="caregiver" required>
+                    <span>A Family Member / Close Caregiver</span>
+                  </label>
+
+                  <label class="choice-label">
+                    <input type="radio" name="applicant_role" value="advocate" required>
+                    <span>Community Health Worker / Patient Advocate</span>
+                  </label>
+                </div>
+              </div>
+
+              <div class="form-grid-2" style="margin-bottom: 20px;">
+                <div class="form-group">
+                  <label for="applicant-name">Full Name (Demo):</label>
+                  <input type="text" id="applicant-name" name="applicant_name" placeholder="e.g. Fatima Ali" required minlength="3" maxlength="50" autocomplete="name">
+                </div>
+
+                <div class="form-group">
+                  <label for="applicant-email">Email Address:</label>
+                  <input type="email" id="applicant-email" name="applicant_email" placeholder="name@example.com" required autocomplete="email">
+                </div>
+              </div>
+
+              <div class="form-grid-2">
+                <div class="form-group">
+                  <label for="demo-passkey">Portal Passkey (Demo Password):</label>
+                  <input type="password" id="demo-passkey" name="demo_password" placeholder="Min 6 characters" required minlength="6" autocomplete="new-password">
+                  <span class="input-hint">Minimum 6 characters.</span>
+                </div>
+
+                <div class="form-group">
+                  <label for="patient-age">Patient Age (Years):</label>
+                  <input type="number" id="patient-age" name="patient_age" min="1" max="110" placeholder="e.g. 45" required>
+                </div>
+              </div>
+            </fieldset>
+
+            <fieldset>
+              <legend>2. Clinical Needs & Geographic Location</legend>
+
+              <p class="fieldset-description">
+                Demonstrating select dropdowns, date pickers, range sliders, and URL inputs.
+              </p>
+
+              <div class="form-grid-2" style="margin-bottom: 20px;">
+                <div class="form-group">
+                  <label for="target-city">City / Region in Pakistan:</label>
+
+                  <select id="target-city" name="target_city" required>
+                    <option value="" disabled selected>-- Select your city --</option>
+                    <option value="lahore">Lahore (Punjab)</option>
+                    <option value="karachi">Karachi (Sindh)</option>
+                    <option value="islamabad_rawalpindi">Islamabad / Rawalpindi (Capital/Punjab)</option>
+                    <option value="peshawar">Peshawar (Khyber Pakhtunkhwa)</option>
+                    <option value="quetta">Quetta (Balochistan)</option>
+                    <option value="multan">Multan (South Punjab)</option>
+                    <option value="faisalabad">Faisalabad</option>
+                    <option value="other">Other District / Rural Area</option>
+                  </select>
+                </div>
+
+                <div class="form-group">
+                  <label for="cancer-type">Cancer Category / Specialization:</label>
+
+                  <select id="cancer-type" name="cancer_type" required>
+                    <option value="" disabled selected>-- Select diagnostic category --</option>
+                    <option value="breast">Breast Oncology</option>
+                    <option value="leukemia_pediatric">Pediatric Blood Cancer / Leukemia (Under 15)</option>
+                    <option value="gastrointestinal">Gastrointestinal / Liver / Colorectal</option>
+                    <option value="head_neck">Head & Neck / Oral Cavity</option>
+                    <option value="lung">Thoracic / Lung Oncology</option>
+                    <option value="gynecological">Gynecological Oncology</option>
+                    <option value="other">Other / Seeking Diagnostic Biopsy</option>
+                  </select>
+                </div>
+              </div>
+
+              <div class="form-grid-2" style="margin-bottom: 20px;">
+                <div class="form-group">
+                  <label for="diagnosis-date">Date of Initial Biopsy or Onset:</label>
+                  <input type="date" id="diagnosis-date" name="diagnosis_date" min="2020-01-01" max="2026-12-31">
+                </div>
+
+                <div class="form-group">
+                  <label for="hospital-portal-url">Online Lab / Hospital Portal Link (Optional):</label>
+                  <input type="url" id="hospital-portal-url" name="portal_url" placeholder="https://patient.hospital.org.pk/view">
+                </div>
+              </div>
+
+              <div class="form-group" style="margin-bottom: 20px;">
+                <label for="support-urgency">Urgency Level (1 = Planning, 5 = Treatment Imminent):</label>
+
+                <input type="range" id="support-urgency" name="urgency" min="1" max="5" value="3" oninput="document.getElementById('urgency-display').textContent = this.value">
+
+                <div style="display: flex; justify-content: space-between; font-size: 0.8rem; color: var(--cb-muted);">
+                  <span>1 (Exploring Options)</span>
+                  <span>Current: Level <strong id="urgency-display" style="color: var(--cb-terracotta);">3</strong></span>
+                  <span>5 (Urgent Treatment Pending)</span>
+                </div>
+              </div>
+
+              <div class="form-group">
+                <label>Types of Support Services Desired (Select all that apply):</label>
+
+                <div class="checkbox-group">
+                  <label class="choice-label">
+                    <input type="checkbox" name="support_needed" value="financial_aid" checked>
+                    <span>Hospital Welfare Fund / Zakat Subsidy (Financial Aid)</span>
+                  </label>
+
+                  <label class="choice-label">
+                    <input type="checkbox" name="support_needed" value="pbm_grant">
+                    <span>Pakistan Bait-ul-Mal (PBM) Government Medical Grant</span>
+                  </label>
+
+                  <label class="choice-label">
+                    <input type="checkbox" name="support_needed" value="caregiver_counseling">
+                    <span>Caregiver Emotional Counseling & Burnout Guidance</span>
+                  </label>
+
+                  <label class="choice-label">
+                    <input type="checkbox" name="support_needed" value="transport_lodging">
+                    <span>Intercity Patient Accommodation (Sarai) & Travel Guidance</span>
+                  </label>
+                </div>
+              </div>
+            </fieldset>
+
+            <fieldset>
+              <legend>3. Accessibility & Consultation Settings</legend>
+
+              <p class="fieldset-description">
+                Demonstrating time pickers, color selectors, file attachments, and disabled inputs.
+              </p>
+
+              <div class="form-grid-3" style="margin-bottom: 20px;">
+                <div class="form-group">
+                  <label for="preferred-time">Preferred Contact Time:</label>
+                  <input type="time" id="preferred-time" name="contact_time" min="09:00" max="18:00" value="11:00">
+                </div>
+
+                <div class="form-group">
+                  <label for="theme-color">Contrast Tint (Color Input):</label>
+                  <input type="color" id="theme-color" name="accent_color" value="#C85A32">
+                </div>
+
+                <div class="form-group">
+                  <label for="closed-fund-input">Special Endowed Quota (Disabled):</label>
+                  <input type="text" id="closed-fund-input" name="closed_fund" value="Currently Closed for FY26" disabled>
+                </div>
+              </div>
+
+              <div class="form-group" style="margin-bottom: 20px;">
+                <label for="demo-file">Sample Prescription / Biopsy Summary (Demonstration Only):</label>
+                <input type="file" id="demo-file" name="sample_file" accept=".pdf,.png,.jpg">
+                <span class="input-hint">Demonstrates file input. No file is uploaded to servers.</span>
+              </div>
+
+              <div class="form-group">
+                <label for="guidance-inquiry">Questions or Specific Clarifications Needed:</label>
+
+                <textarea id="guidance-inquiry" name="user_questions" rows="4" maxlength="500" placeholder="Describe any questions regarding application criteria, hospital desks, or required documentation..."></textarea>
+
+                <span class="input-hint">Maximum 500 characters.</span>
+              </div>
+            </fieldset>
+
+            <div class="form-actions-row">
+              <button type="submit" class="btn-submit">
+                Generate Guidance Checklist
+              </button>
+
+              <button type="reset" class="btn-reset">
+                Clear Form Fields
+              </button>
+            </div>
+
+            <div id="form-feedback-box" class="form-result-box" role="status">
+              <h3 class="form-result-title">
+                Checklist Generated Successfully (Demonstration)
+              </h3>
+
+              <p class="form-result-text" id="feedback-summary-text">
+                Your entries have been validated locally. Since CareBridge is an educational demonstration prototype, no official application has been transmitted. Please click below to review your customized next steps with the CareBridge Support Assistant.
+              </p>
+
+              <div style="margin-top: 14px;">
+                <button type="button" class="btn-ai-consult open-chatbot-btn" id="ask-ai-from-form" data-chat-question="How can I find financial assistance?">
+                  Ask the Support Assistant Now
+                </button>
+              </div>
+            </div>
+
+          </form>
+        </div>
+
+        <aside class="form-sidebar">
+          <div class="ai-help-banner-card">
+            <h3>Need Guidance First?</h3>
+
+            <p>
+              Uncertain which hospital welfare fund applies to your diagnosis? Our Support Assistant is ready to help explain eligibility in simple words.
+            </p>
+
+            <button type="button" class="btn-ai-consult open-chatbot-btn" data-chat-question="How can I find financial assistance?">
+              Ask the Support Assistant
+            </button>
+          </div>
+
+          <div class="sidebar-card">
+            <h3>Key Documents Required</h3>
+
+            <p>When you eventually visit an official hospital welfare desk, remember to take:</p>
+
+            <ul style="font-size: 0.85rem; line-height: 1.6; color: var(--cb-charcoal); padding-left: 18px;">
+              <li>Biopsy / Histopathology Report</li>
+              <li>Patient CNIC / B-Form copies</li>
+              <li>Hospital MS Cost Estimate</li>
+              <li>Monthly Utility Bills</li>
+              <li>Proof of Income / Salary Slip</li>
+            </ul>
+          </div>
+
+          <div class="sidebar-card" style="border-left: 3px solid var(--cb-terracotta);">
+            <h3>Prototype Notice</h3>
+
+            <p>
+              Submitting this demonstration form does not establish clinical eligibility or guarantee welfare funds. CareBridge provides informational navigation only.
+            </p>
+          </div>
+        </aside>
+
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container">
+      <div class="footer-grid">
+
+        <div class="footer-brand">
+          <h3>CareBridge</h3>
+
+          <p>
+            An educational cancer support, financial aid navigation, and awareness platform built with compassion, dignity, and accessibility.
+          </p>
+        </div>
+
+        <div class="footer-col">
+          <h4>Explore Platform</h4>
+
+          <ul class="footer-links">
+            <li><a href="index.html">Home</a></li>
+            <li><a href="media.html">Media & Awareness</a></li>
+            <li><a href="register.html">Registration</a></li>
+            <li><a href="services.html">Services</a></li>
+          </ul>
+        </div>
+
+        <div class="footer-col">
+          <h4>Community & Stories</h4>
+
+          <ul class="footer-links">
+            <li><a href="portfolio.html">Stories of Hope</a></li>
+            <li><a href="contact.html">Contact</a></li>
+            <li><a href="contact.html#limitations">AI & Safety Disclaimers</a></li>
+          </ul>
+        </div>
+
+        <div class="footer-col">
+          <h4>Emergency Notice</h4>
+
+          <p style="color: rgba(255,255,255,0.7); font-size: 0.85rem; line-height: 1.55;">
+            CareBridge does not provide medical emergency treatment. For critical urgent symptoms, please dial Rescue 1122 or attend your closest emergency department.
+          </p>
+        </div>
+
+      </div>
+
+      <div class="footer-bottom">
+        <p>&copy; 2026 CareBridge. Connecting People · Sharing Hope · Supporting Lives.</p>
+        <p>Educational Prototype · Front-End Demonstration</p>
+      </div>
+    </div>
+  </footer>
+
+</body>
+</html>

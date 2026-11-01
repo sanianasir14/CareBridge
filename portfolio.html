@@ -1,0 +1,249 @@
+
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Stories of Hope — CareBridge</title>
+  <meta name="description" content="Inspiring stories of cancer recovery, caregiver resilience, and community awareness.">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <header class="site-header">
+    <div class="container header-inner">
+      <a href="index.html" class="brand-link" aria-label="CareBridge Home">
+        <div class="brand-icon">♥</div>
+        <span class="brand-text">CareBridge</span>
+      </a>
+
+      <nav id="site-nav-menu" class="site-nav">
+        <a href="index.html" class="nav-link">Home</a>
+        <a href="media.html" class="nav-link">Media & Awareness</a>
+        <a href="register.html" class="nav-link">Registration</a>
+        <a href="services.html" class="nav-link">Services</a>
+        <a href="portfolio.html" class="nav-link active">Stories of Hope</a>
+        <a href="contact.html" class="nav-link">Contact</a>
+      </nav>
+
+      <div class="header-utilities">
+        <button class="header-cta-btn open-chatbot-btn" type="button">
+          Support Assistant
+        </button>
+        <button id="mobile-nav-toggle" class="mobile-menu-btn" aria-label="Toggle navigation menu" aria-expanded="false">
+          Menu
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <main id="main-content">
+
+    <section class="page-banner">
+      <div class="container">
+        <span class="banner-badge">Resilience, Healing & Community</span>
+        <h1 class="banner-title">Stories of Hope & Courage</h1>
+        <p class="banner-desc">
+          A respectful gallery sharing patient journeys, caregiver reflections, and community awareness.
+        </p>
+
+        <div class="privacy-dignity-banner">
+          <div>
+            <strong>Respect for Patient Dignity & Educational Disclaimer:</strong>
+            <span>
+              All stories presented below are educational demonstration profiles. They protect patient privacy and do not claim unverified medical cures.
+            </span>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="featured-story-section">
+      <div class="container">
+        <article class="featured-story-grid">
+          <figure class="featured-story-image">
+            <img src="images/stories_patient_hope_portrait_1793365623376.jpg" alt="Cancer survivor in a garden">
+          </figure>
+
+          <div class="featured-story-content">
+            <div style="display: flex; gap: 8px; align-items: center; margin-bottom: 12px;">
+              <span class="story-category-tag">Featured Journey · Breast Oncology Survivor</span>
+              <span class="demo-indicator">Demonstration Profile</span>
+            </div>
+
+            <h2 id="featured-story-title" style="font-size: clamp(1.8rem, 3vw, 2.2rem); margin-bottom: 14px;">
+              &ldquo;The Garden After the Storm: Finding Strength in Early Action&rdquo;
+            </h2>
+
+            <p style="font-size: 1.05rem; line-height: 1.65; margin-bottom: 20px;">
+              &ldquo;When I felt an unusual lump in 2024, my first reaction was silence. I feared what it would mean for my children and the cost of chemotherapy. But connecting with an early screening camp at Pink Ribbon and receiving guidance on hospital welfare transformed terror into a plan. Today, completing treatment in Lahore, my message to every sister is simple: do not let hesitation rob you of tomorrows.&rdquo;
+            </p>
+
+            <div style="display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; gap: 14px;">
+              <div style="font-size: 0.9rem; font-weight: 700; color: var(--cb-forest);">
+                Attribution: Tahira M. (Demonstration Profile, Lahore)
+              </div>
+              <button class="btn-read-story" onclick="openStoryModal('tahira')">
+                Read Full Reflection &rarr;
+              </button>
+            </div>
+          </div>
+        </article>
+      </div>
+    </section>
+
+    <section class="stories-gallery-section">
+      <div class="container">
+        <div style="text-align: center; max-width: 680px; margin: 0 auto 36px auto;">
+          <h2 id="gallery-title" style="font-size: clamp(1.8rem, 3.2vw, 2.3rem); margin-bottom: 12px;">
+            Perspectives of Care & Resilience
+          </h2>
+          <p>
+            Stories about personal experiences, caregiving, community advocacy, and cancer awareness.
+          </p>
+        </div>
+
+        <div class="stories-grid">
+
+          <article class="story-card">
+            <figure class="story-figure">
+              <img src="images/awareness_community_caregiver_1793365626457.jpg" alt="Caregiver talking with a health counselor">
+              <figcaption class="story-figcaption">
+                Fig. 1 — Emotional support during treatment
+              </figcaption>
+            </figure>
+            <div class="story-card-body">
+              <span class="story-category-tag">Caregiver Experience</span>
+              <h3 class="story-headline">Learning to Breathe: A Caregiver's Diary</h3>
+              <p class="story-excerpt">
+                &ldquo;When my father was diagnosed with colon cancer, I became an overnight pharmacist, appointment scheduler, and emotional buffer. The hardest part wasn't the hospital runs—it was the silent exhaustion. Finding a caregiver support circle saved my sanity.&rdquo;
+              </p>
+              <div class="story-attribution">
+                <span>Adnan S. (Karachi)</span>
+                <span class="demo-indicator">Demonstration</span>
+              </div>
+              <button class="btn-read-story" onclick="openStoryModal('adnan')">Read Story &rarr;</button>
+            </div>
+          </article>
+
+          <article class="story-card">
+            <figure class="story-figure">
+              <img src="images/hero_cancer_support_family_1793365623032.jpg" alt="Family talking in a pediatric oncology lounge">
+              <figcaption class="story-figcaption">
+                Fig. 2 — Pediatric oncology support
+              </figcaption>
+            </figure>
+            <div class="story-card-body">
+              <span class="story-category-tag">Pediatric Oncology Support</span>
+              <h3 class="story-headline">Little Warriors: Hamza's Journey Through ALL</h3>
+              <p class="story-excerpt">
+                &ldquo;At age six, Acute Lymphoblastic Leukemia felt like an unimaginable sentence for our little boy. The Child Aid Association at NICH provided every single vial of chemotherapy free of charge. Today, Hamza is back holding his school backpack.&rdquo;
+              </p>
+              <div class="story-attribution">
+                <span>Khadija & Usman (Hyderabad)</span>
+                <span class="demo-indicator">Demonstration</span>
+              </div>
+              <button class="btn-read-story" onclick="openStoryModal('hamza')">Read Story &rarr;</button>
+            </div>
+          </article>
+
+          <article class="story-card">
+            <figure class="story-figure">
+              <img src="images/volunteer_ways_to_help_1793365624660.jpg" alt="Volunteers preparing cancer awareness pamphlets">
+              <figcaption class="story-figcaption">
+                Fig. 3 — Community awareness activities
+              </figcaption>
+            </figure>
+            <div class="story-card-body">
+              <span class="story-category-tag">Community Advocacy</span>
+              <h3 class="story-headline">Breaking the Taboo in Multan</h3>
+              <p class="story-excerpt">
+                &ldquo;In our neighborhood, people would whisper when cancer was mentioned, as if saying the word could invite the disease. Our youth volunteer club began holding small neighborhood tea sessions, sharing the official checklists of Bait-ul-Mal.&rdquo;
+              </p>
+              <div class="story-attribution">
+                <span>Zainab R. (Multan)</span>
+                <span class="demo-indicator">Demonstration</span>
+              </div>
+              <button class="btn-read-story" onclick="openStoryModal('zainab')">Read Story &rarr;</button>
+            </div>
+          </article>
+
+        </div>
+      </div>
+    </section>
+
+    <div id="story-modal-overlay" class="story-dialog-backdrop" role="dialog" aria-modal="true" aria-hidden="true">
+      <div class="story-dialog-window">
+        <button class="story-dialog-close-btn" onclick="closeStoryModal()" aria-label="Close Story">
+          Close
+        </button>
+
+        <div style="display: flex; gap: 8px; align-items: center; margin-bottom: 12px;">
+          <span id="modal-category" class="story-category-tag">Category</span>
+          <span class="demo-indicator">Demonstration Story</span>
+        </div>
+
+        <h2 id="modal-title" style="font-size: 1.6rem; color: var(--cb-forest); margin-bottom: 16px;">
+          Story Title
+        </h2>
+
+        <div id="modal-content" style="font-size: 0.95rem; line-height: 1.7; color: var(--cb-charcoal); margin-bottom: 24px;"></div>
+
+        <div style="background-color: var(--cb-surface-alt); border-radius: 8px; padding: 14px 18px; font-size: 0.825rem; color: var(--cb-forest); margin-bottom: 20px;">
+          <strong>Educational Takeaway:</strong>
+          Early detection, hospital documentation, and community support can help patients during their cancer journey.
+        </div>
+
+        <div style="display: flex; justify-content: flex-end; gap: 12px;">
+          <button class="btn-read-story" onclick="closeStoryModal()">Close Story</button>
+        </div>
+      </div>
+    </div>
+
+  </main>
+
+  <footer class="site-footer">
+    <div class="container">
+      <div class="footer-grid">
+        <div class="footer-brand">
+          <h3>CareBridge</h3>
+          <p>
+            An educational cancer support, financial aid navigation, and awareness platform built with compassion, dignity, and accessibility.
+          </p>
+        </div>
+
+        <div class="footer-col">
+          <h4>Explore Platform</h4>
+          <ul class="footer-links">
+            <li><a href="index.html">Home</a></li>
+            <li><a href="media.html">Media & Awareness</a></li>
+            <li><a href="register.html">Registration</a></li>
+            <li><a href="services.html">Services</a></li>
+          </ul>
+        </div>
+
+        <div class="footer-col">
+          <h4>Community & Stories</h4>
+          <ul class="footer-links">
+            <li><a href="portfolio.html">Stories of Hope</a></li>
+            <li><a href="contact.html">Contact</a></li>
+            <li><a href="contact.html#limitations">AI & Safety Disclaimers</a></li>
+          </ul>
+        </div>
+
+        <div class="footer-col">
+          <h4>Emergency Notice</h4>
+          <p style="color: rgba(255,255,255,0.7); font-size: 0.85rem; line-height: 1.55;">
+            CareBridge does not provide medical emergency treatment. For urgent symptoms, dial Rescue 1122 or visit your nearest emergency department.
+          </p>
+        </div>
+      </div>
+
+      <div class="footer-bottom">
+        <p>&copy; 2026 CareBridge. Connecting People · Sharing Hope · Supporting Lives.</p>
+        <p>Educational Prototype · Front-End Demonstration</p>
+      </div>
+    </div>
+  </footer>
+</body>
+</html>
